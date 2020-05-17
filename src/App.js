@@ -127,6 +127,7 @@ function App() {
                 return {...col, tasks}
             } else return col;
         })
+
         setColumns(reranged);
     };
 
