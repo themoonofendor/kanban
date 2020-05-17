@@ -121,7 +121,14 @@ function App() {
 
     const down = (arg) => {
         console.log(arg)
-    }
+        const reranged = columns.map(col => {
+            if (col.name === arg.columnName) {
+                const tasks = col.tasks
+                return {...col, tasks}
+            } else return col;
+        })
+        setColumns(reranged);
+    };
 
 
     return (
